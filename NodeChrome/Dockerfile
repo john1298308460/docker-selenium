@@ -58,4 +58,4 @@ RUN if [ -z "$CHROME_DRIVER_VERSION" ]; \
 #============================================
 # Dumping Browser name and version for config
 #============================================
-RUN echo ${SE_BROWSER_TYPE} > /opt/selenium/browser_name
+#RUN echo "chrome" > /opt/selenium/browser_name
