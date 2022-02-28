@@ -2,10 +2,12 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM selenium/node-base:4.1.2-20220217
+#FROM selenium/node-base:4.1.2-20220217
+FROM fit2cloud.com/node-base:test
 LABEL authors=SeleniumHQ
 
 USER root
+ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 #============================================
 # Google Chrome
@@ -33,6 +35,7 @@ COPY wrap_chrome_binary /opt/bin/wrap_chrome_binary
 RUN /opt/bin/wrap_chrome_binary
 
 USER 1200
+RUN sudo chmod 644 ~/.wget-hsts
 
 #============================================
 # Chrome webdriver

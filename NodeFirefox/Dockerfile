@@ -2,10 +2,13 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM selenium/node-base:4.1.2-20220217
+#FROM selenium/node-base:4.1.2-20220217
+FROM fit2cloud.com/node-base:test
 LABEL authors=SeleniumHQ
 
 USER root
+ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
+RUN sudo chmod 644 ~/.wget-hsts
 
 #=========
 # Firefox
@@ -42,4 +45,4 @@ USER 1200
 #============================================
 # Dumping Browser name and version for config
 #============================================
-RUN echo "firefox" > /opt/selenium/browser_name
+#RUN echo "firefox" > /opt/selenium/browser_name
