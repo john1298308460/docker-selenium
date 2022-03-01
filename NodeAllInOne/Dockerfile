@@ -10,6 +10,8 @@ USER root
 ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 RUN sudo chmod 644 ~/.wget-hsts
 
+
+
 #============================================
 # Google Chrome
 #============================================
@@ -58,6 +60,7 @@ RUN if [ -z "$CHROME_DRIVER_VERSION" ]; \
   && sudo ln -fs /opt/selenium/chromedriver-$CHROME_DRIVER_VERSION /usr/bin/chromedriver
 
 
+
 #============================================
 # Microsoft Edge
 #============================================
@@ -101,6 +104,7 @@ RUN if [ -z "$EDGE_DRIVER_VERSION" ]; \
   && mv /opt/selenium/msedgedriver /opt/selenium/msedgedriver-$EDGE_DRIVER_VERSION \
   && chmod 755 /opt/selenium/msedgedriver-$EDGE_DRIVER_VERSION \
   && sudo ln -fs /opt/selenium/msedgedriver-$EDGE_DRIVER_VERSION /usr/bin/msedgedriver
+
 
 
 #=========

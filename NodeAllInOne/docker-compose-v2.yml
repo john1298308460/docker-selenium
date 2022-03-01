@@ -16,19 +16,6 @@ services:
     ports:
       - "6900:5900"
 
-  chrome_2:
-    image: fit2cloud.com/node-browser:20220228
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_BROWSER_TYPE=chrome
-    ports:
-      - "6903:5900"
-
   edge:
     image: fit2cloud.com/node-browser:20220228
     shm_size: 2gb
