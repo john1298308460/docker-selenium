@@ -2,9 +2,6 @@
 #
 # IMPORTANT: Change this file only in directory Standalone!
 
-#chrome
-echo "chrome" > /opt/selenium/browser_name
-
 if [ ! -z "$SE_OPTS" ]; then
   echo "Appending Selenium options: ${SE_OPTS}"
 fi
