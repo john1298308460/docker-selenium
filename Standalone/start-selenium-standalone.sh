@@ -17,10 +17,10 @@ echo "Starting Selenium Grid Standalone..."
 nohup java ${JAVA_OPTS} -jar /opt/selenium/selenium-server.jar standalone \
   --bind-host ${SE_BIND_HOST} \
   --config /opt/selenium/config.toml \
-  --server.port=6900
-  ${SE_OPTS} &
+  --server.port=6900 &
+  ${SE_OPTS}
 
-sleep 3
+sleep 5
 
 
 #edge
@@ -38,10 +38,10 @@ echo "Starting Selenium Grid Standalone..."
 nohup java ${JAVA_OPTS} -jar /opt/selenium/selenium-server.jar standalone \
   --bind-host ${SE_BIND_HOST} \
   --config /opt/selenium/config.toml \
-  --server.port=6901
-  ${SE_OPTS} &
+  --server.port=6901 &
+  ${SE_OPTS}
 
-sleep 3
+sleep 5
 
 
 #firefox
@@ -59,5 +59,5 @@ echo "Starting Selenium Grid Standalone..."
 nohup java ${JAVA_OPTS} -jar /opt/selenium/selenium-server.jar standalone \
   --bind-host ${SE_BIND_HOST} \
   --config /opt/selenium/config.toml \
-  --server.port=6902
-  ${SE_OPTS} &
+  --server.port=6902 &
+  ${SE_OPTS}
